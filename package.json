@@ -3,7 +3,7 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
-  "homepage": "https://nicholas.github.io",
+  "homepage": "https://nicoknights33-rgb.github.io",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
