@@ -1,0 +1,131 @@
+.hero {
+  position: relative;
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  align-items: center;
+  padding: 5.5rem var(--section-padding-x) 3rem;
+  overflow: hidden;
+}
+
+.blob {
+  position: absolute;
+  top: -10%;
+  right: -5%;
+  width: min(500px, 80vw);
+  height: min(500px, 80vw);
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--accent-dim) 0%, transparent 70%);
+  animation: pulse 8s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1) translate(0, 0);
+    opacity: 0.6;
+  }
+  50% {
+    transform: scale(1.15) translate(-20px, 20px);
+    opacity: 1;
+  }
+}
+
+.tag {
+  position: absolute;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  pointer-events: none;
+  user-select: none;
+}
+
+.tag1 {
+  top: 18%;
+  right: 15%;
+}
+
+.tag2 {
+  top: 35%;
+  right: 8%;
+}
+
+.tag3 {
+  bottom: 25%;
+  right: 20%;
+}
+
+.tag4 {
+  top: 55%;
+  left: 55%;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+  width: 100%;
+}
+
+.greeting {
+  font-family: var(--font-heading);
+  font-size: clamp(1.25rem, 4vw, 2rem);
+  font-weight: 500;
+  color: var(--text-secondary);
+  margin-bottom: 0.25rem;
+}
+
+.title {
+  font-size: clamp(2rem, 8vw, 4.5rem);
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 0.1rem;
+}
+
+.accent {
+  color: var(--accent);
+}
+
+.subtitle {
+  font-family: var(--font-mono);
+  font-size: clamp(0.75rem, 2.5vw, 0.95rem);
+  color: var(--text-secondary);
+  margin-top: 1.25rem;
+  margin-bottom: 2rem;
+  line-height: 1.7;
+}
+
+.ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+@media (max-width: 767px) {
+  .tag {
+    display: none;
+  }
+
+  .hero {
+    padding-top: 5rem;
+    padding-bottom: 2rem;
+    align-items: flex-start;
+    min-height: auto;
+    min-height: calc(100dvh - 2rem);
+  }
+
+  .ctas {
+    flex-direction: column;
+  }
+
+  .ctas .btn {
+    width: 100%;
+  }
+}
+
+@media (min-width: 768px) {
+  .hero {
+    padding: 6rem var(--section-padding-x) 4rem;
+  }
+}

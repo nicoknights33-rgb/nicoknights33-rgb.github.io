@@ -1,0 +1,23 @@
+.footer {
+  padding: 2rem clamp(1.25rem, 5vw, 4rem) 3rem;
+  text-align: center;
+  border-top: 1px solid var(--border);
+}
+
+.copyright {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+@media (min-width: 768px) {
+  .footer {
+    padding-left: calc(var(--nav-width) + clamp(1.5rem, 5vw, 4rem));
+    padding-bottom: 4rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .footer {
+    padding-bottom: 4rem;
+  }
+}

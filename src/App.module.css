@@ -1,0 +1,27 @@
+.app {
+  min-height: 100vh;
+}
+
+.main {
+  padding-left: 0;
+}
+
+@media (min-width: 768px) {
+  .main {
+    padding-left: var(--nav-width);
+  }
+}
+
+.section {
+  padding: var(--section-padding-y) var(--section-padding-x);
+  max-width: calc(var(--max-width) + var(--nav-width));
+  margin: 0 auto;
+}
+
+.section + .section {
+  padding-top: calc(var(--section-padding-y) * 0.65);
+}
+
+.sectionInner {
+  max-width: var(--max-width);
+}
